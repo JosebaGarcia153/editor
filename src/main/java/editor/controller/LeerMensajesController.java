@@ -31,7 +31,6 @@ public class LeerMensajesController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Alert alert = new Alert();
 		ArrayList<Mensaje> msgs = new ArrayList<Mensaje>();
 		
 		try {
@@ -41,11 +40,9 @@ public class LeerMensajesController extends HttpServlet {
 		} catch (Exception e) {
 			
 			LOG.error(e);
-			alert = new Alert("warning", e.getMessage());
 			
 		} finally {
 			//Guarda los datos y los envia a la URL
-			request.setAttribute("alert", alert);
 			request.setAttribute("mensajes", msgs);
 			LOG.debug("forward: " + URL);
 			
