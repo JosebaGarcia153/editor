@@ -19,7 +19,7 @@
 	<script src="https://cdn.ckeditor.com/ckeditor5/26.0.0/classic/ckeditor.js"></script>
     
     <title>Text Editor</title>
-    
+	
 </head>
 <body>
 	<main role="main" class="container pt-5 mt-5">
